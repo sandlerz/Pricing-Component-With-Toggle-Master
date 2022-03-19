@@ -1,0 +1,75 @@
+@use '../variables' as *;
+
+.price{
+  display: flex;
+  align-items: center;
+  
+  div{
+    height: 45.5rem;
+    width: 35rem;
+    background-color: white;
+    padding: 3rem;
+    color: $DarkGrayishBlue;
+    display: grid;
+    place-items: center;
+    
+    .cost{
+      font-size:  7rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 0.8rem;
+      span{
+        font-size: 4rem;  
+        display: block;
+      }
+    }
+
+    .border-text{
+      border-top: solid 1px $LightGrayishBlue;
+      border-bottom: solid 1px $LightGrayishBlue;
+    }
+
+    p{
+      padding: 1.8rem;
+      width: 100%;
+    }
+
+    button{
+      margin-top: 3rem;
+      padding: 1.5rem 0;
+      letter-spacing: 0.2rem;
+      border-radius: 0.5rem;
+      @include linear-gradient-button();
+      border: none;
+      cursor: pointer;
+      color: white;
+      font-weight: 700;
+      font-family: Montserrat;
+      width: 100%
+    }
+  }
+
+  .professional{
+    padding: 0;
+    height: 50rem;
+    @include linear-gradient();
+    border-radius: 1rem;
+    div{
+      color: white;
+      background: transparent;
+      button{
+        background: white;
+        color: $GrayishBlue;
+      }
+    }
+  }
+  .left{
+    border-top-left-radius: 1rem;
+    border-end-start-radius: 1rem;
+  }
+  .right{
+    border-top-right-radius: 1rem;
+    border-end-end-radius: 1rem;
+  }
+}
