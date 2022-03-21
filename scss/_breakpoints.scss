@@ -1,0 +1,12 @@
+@media only screen and (max-width: 68.75em) {
+  .price {
+    flex-direction: column;
+    gap: 2.5rem;
+  }
+  .left {
+    border-radius: 1rem;
+  }
+  .right {
+    border-radius: 1rem;
+  }
+}

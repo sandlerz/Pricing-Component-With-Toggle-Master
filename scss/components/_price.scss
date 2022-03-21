@@ -1,10 +1,10 @@
-@use '../variables' as *;
+@use "../variables" as *;
 
-.price{
+.price {
   display: flex;
   align-items: center;
-  
-  div{
+
+  div {
     height: 45.5rem;
     width: 35rem;
     background-color: white;
@@ -12,64 +12,86 @@
     color: $DarkGrayishBlue;
     display: grid;
     place-items: center;
-    
-    .cost{
-      font-size:  7rem;
+    padding: 3.5rem 3.2rem 3.0rem;
+
+    .cost {
+      font-size: 7rem;
       display: flex;
       justify-content: center;
       align-items: center;
       gap: 0.8rem;
-      span{
-        font-size: 4rem;  
+      padding: 0 0 1.8rem;
+      max-width: 28.6rem;
+      span {
+        font-size: 4rem;
         display: block;
       }
     }
 
-    .border-text{
+    .border-text {
       border-top: solid 1px $LightGrayishBlue;
       border-bottom: solid 1px $LightGrayishBlue;
     }
 
-    p{
+    p {
       padding: 1.8rem;
       width: 100%;
     }
 
-    button{
+    button {
       margin-top: 3rem;
       padding: 1.5rem 0;
+      width: 100%;
       letter-spacing: 0.2rem;
-      border-radius: 0.5rem;
-      @include linear-gradient-button();
-      border: none;
-      cursor: pointer;
-      color: white;
-      font-weight: 700;
       font-family: Montserrat;
-      width: 100%
+      font-weight: 700;
+      border-radius: 0.5rem;
+      border: none;
+      @include linear-gradient-button();
+      color: white;
+      cursor: pointer;
+    }
+    button:hover {
+      margin-top: 2.8rem;
+      border: solid 1px hsl(237, 63%, 64%);
+      background: transparent;
+      color: hsl(237, 63%, 64%);
     }
   }
 
-  .professional{
+  .professional {
     padding: 0;
     height: 50rem;
-    @include linear-gradient();
     border-radius: 1rem;
-    div{
+    z-index: 1;
+    @include linear-gradient();
+    @include box-shadow();
+
+    div {
       color: white;
       background: transparent;
-      button{
+
+      button {
+        color: hsl(237, 63%, 64%);
         background: white;
-        color: $GrayishBlue;
+      }
+
+      button:hover {
+        margin-top: 2.8rem;
+        border: solid 1px white;
+        background: transparent;
+        color: white;
       }
     }
   }
-  .left{
+  .left {
     border-top-left-radius: 1rem;
     border-end-start-radius: 1rem;
+    @include box-shadow();
   }
-  .right{
+  .right {
     border-top-right-radius: 1rem;
     border-end-end-radius: 1rem;
+    @include box-shadow();
   }
 }

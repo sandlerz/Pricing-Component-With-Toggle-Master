@@ -17,6 +17,9 @@
 @mixin linear-gradient-button() {
   background: linear-gradient(90deg, hsl(236, 72%, 79%),hsl(237, 63%, 64%));
 }
+@mixin box-shadow() {
+  box-shadow: 0.5rem 0.8rem 2rem 0.1rem rgba(0, 0, 0, 0.055);
+}
 // - Linear Gradient: hsl(236, 72%, 79%) to hsl(237, 63%, 64%)
 
 // ### Neutral

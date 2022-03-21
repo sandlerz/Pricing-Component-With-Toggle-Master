@@ -1,7 +1,59 @@
-@use '../variables' as *;
+@use "../variables" as *;
 
-.toggle{
+.toggle {
   display: flex;
   justify-content: center;
-  margin: 3rem 0 8rem;
+  margin: 5rem 0 6.5rem;
+  align-items: center;
+  p {
+    color: $LightGrayishBlue;
+  }
+
+  .switch {
+    margin: 0 2.5rem;
+    position: relative;
+    display: inline-block;
+    width: 5.5rem;
+    height: 3.2rem;
+    input {
+      opacity: 0;
+    }
+  }
+
+  .slider {
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    @include linear-gradient-button;
+    border-radius: 30rem;
+    &::before {
+      position: absolute;
+      content: "";
+      height: 2.4rem;
+      width: 2.4rem;
+      top: 0.4rem;
+      right: 0.4rem;
+      border-radius: 50%;
+      background-color: white;
+      transition: 0.4s ease;
+    }
+    &::after {
+      position: absolute;
+      content: "";
+      height: 2.4rem;
+      width: 2.4rem;
+      top: 0.4rem;
+      right: 0.4rem;
+      border-radius: 50%;
+      background-color: white;
+      transition: 0.5s ease;
+    }
+  }
+  input:checked + .slider::before,
+  input:checked + .slider::after {
+    transform: translateX(-2.25rem);
+  }
 }

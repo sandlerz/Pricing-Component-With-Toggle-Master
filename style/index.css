@@ -21,6 +21,14 @@ body {
   background-color: #f6f6fe;
 }
 
+main {
+  padding: 8rem 0;
+}
+
+h2 {
+  font-size: 1.8rem;
+}
+
 .bg-top {
   position: absolute;
   height: 100vh;
@@ -41,10 +49,65 @@ body {
   background-position: left bottom;
 }
 
+header {
+  font-size: 1.8rem;
+  color: #6d708d;
+}
+
 .toggle {
   display: flex;
   justify-content: center;
-  margin: 3rem 0 8rem;
+  margin: 5rem 0 6.5rem;
+  align-items: center;
+}
+.toggle p {
+  color: #b3b5c6;
+}
+.toggle .switch {
+  margin: 0 2.5rem;
+  position: relative;
+  display: inline-block;
+  width: 5.5rem;
+  height: 3.2rem;
+}
+.toggle .switch input {
+  opacity: 0;
+}
+.toggle .slider {
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(90deg, #a3a8f0, #696fdd);
+  border-radius: 30rem;
+}
+.toggle .slider::before {
+  position: absolute;
+  content: "";
+  height: 2.4rem;
+  width: 2.4rem;
+  top: 0.4rem;
+  right: 0.4rem;
+  border-radius: 50%;
+  background-color: white;
+  transition: 0.4s ease;
+}
+.toggle .slider::after {
+  position: absolute;
+  content: "";
+  height: 2.4rem;
+  width: 2.4rem;
+  top: 0.4rem;
+  right: 0.4rem;
+  border-radius: 50%;
+  background-color: white;
+  transition: 0.5s ease;
+}
+.toggle input:checked + .slider::before,
+.toggle input:checked + .slider::after {
+  transform: translateX(-2.25rem);
 }
 
 .price {
@@ -59,6 +122,7 @@ body {
   color: #494c5f;
   display: grid;
   place-items: center;
+  padding: 3.5rem 3.2rem 3rem;
 }
 .price div .cost {
   font-size: 7rem;
@@ -66,6 +130,8 @@ body {
   justify-content: center;
   align-items: center;
   gap: 0.8rem;
+  padding: 0 0 1.8rem;
+  max-width: 28.6rem;
 }
 .price div .cost span {
   font-size: 4rem;
@@ -82,37 +148,68 @@ body {
 .price div button {
   margin-top: 3rem;
   padding: 1.5rem 0;
-  letter-spacing: 0.2rem;
-  border-radius: 0.5rem;
-  background: linear-gradient(90deg, #a3a8f0, #696fdd);
-  border: none;
-  cursor: pointer;
-  color: white;
-  font-weight: 700;
-  font-family: Montserrat;
   width: 100%;
+  letter-spacing: 0.2rem;
+  font-family: Montserrat;
+  font-weight: 700;
+  border-radius: 0.5rem;
+  border: none;
+  background: linear-gradient(90deg, #a3a8f0, #696fdd);
+  color: white;
+  cursor: pointer;
+}
+.price div button:hover {
+  margin-top: 2.8rem;
+  border: solid 1px #696fdd;
+  background: transparent;
+  color: #696fdd;
 }
 .price .professional {
   padding: 0;
   height: 50rem;
-  background: linear-gradient(#a3a8f0, #696fdd);
   border-radius: 1rem;
+  z-index: 1;
+  background: linear-gradient(#a3a8f0, #696fdd);
+  box-shadow: 0.5rem 0.8rem 2rem 0.1rem rgba(0, 0, 0, 0.055);
 }
 .price .professional div {
   color: white;
   background: transparent;
 }
 .price .professional div button {
+  color: #696fdd;
   background: white;
-  color: #6d708d;
+}
+.price .professional div button:hover {
+  margin-top: 2.8rem;
+  border: solid 1px white;
+  background: transparent;
+  color: white;
 }
 .price .left {
   border-top-left-radius: 1rem;
   border-end-start-radius: 1rem;
+  box-shadow: 0.5rem 0.8rem 2rem 0.1rem rgba(0, 0, 0, 0.055);
 }
 .price .right {
   border-top-right-radius: 1rem;
   border-end-end-radius: 1rem;
+  box-shadow: 0.5rem 0.8rem 2rem 0.1rem rgba(0, 0, 0, 0.055);
+}
+
+@media only screen and (max-width: 68.75em) {
+  .price {
+    flex-direction: column;
+    gap: 2.5rem;
+  }
+
+  .left {
+    border-radius: 1rem;
+  }
+
+  .right {
+    border-radius: 1rem;
+  }
 }
 
 /*# sourceMappingURL=index.css.map */
