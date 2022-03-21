@@ -130,7 +130,7 @@ header {
   justify-content: center;
   align-items: center;
   gap: 0.8rem;
-  padding: 0 0 1.8rem;
+  padding: 1.8rem 0;
   max-width: 28.6rem;
 }
 .price div .cost span {
